@@ -31,8 +31,8 @@
 
     ($ sinh( x ) $, $ cosh( x ) $),
     ($ cosh( x ) $, $ sinh( x ) $),
-    ($ tanh( x ) $, $ sech( x )^2 $),
-    ($ coth( x ) $, $ - csch( x )^2 $),
+    ($ tanh( x ) $, $ sech^2  x  $),
+    ($ coth( x ) $, $ - csch ^2 x $),
     ($ sech( x ) $, $ - sech( x ) tanh( x ) $),
     ($ csch( x ) $, $ - csch( x ) coth( x ) $),
 
@@ -62,7 +62,7 @@
     ($ a^x $, $ a^x / ln( a ) + C $),
 
     ($ ln( x ) $, $ x ln( x ) - x + C $),
-    ($ log_a( x ) $, $ x log_a( x ) - x / ln( a ) + C $),
+    ($ log_a x $, $ x log_a x - x / ln( a ) + C $),
 
     ($ sin( x ) $, $ - cos( x ) + C $),
     ($ cos( x ) $, $ sin( x ) + C $),
@@ -100,32 +100,33 @@
 #table_with_sn(
   ([ $ "Quantity" $ ], [ $ "Formula" $ ]),
    (
-    ($ "Gradient of f" $, $ nabla f = ( ( partial f ) / ( partial x ) , ( partial f ) / ( partial y ) , ( partial f ) / ( partial z ) ) $),
-    ($ "Divergence of F" $, $ nabla . F = ( partial F_x ) / ( partial x ) + ( partial F_y ) / ( partial y ) + ( partial F_z ) / ( partial z ) $),
-    ($ "Curl of F" $, $ nabla times F = ( ( partial F_z ) / ( partial y ) - ( partial F_y ) / ( partial z ) , ( partial F_x ) / ( partial z ) - ( partial F_z ) / ( partial x ) , ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) $),
+    ($ "Gradient of f" , nabla f $ , $ ( ( partial f ) / ( partial x ) , ( partial f ) / ( partial y ) , ( partial f ) / ( partial z ) ) $),
+    ($ "Divergence of F", nabla . F $, $ ( partial F_x ) / ( partial x ) + ( partial F_y ) / ( partial y ) + ( partial F_z ) / ( partial z ) $),
+    ($ "Curl of F", nabla times F $, $ ( ( partial F_z ) / ( partial y ) - ( partial F_y ) / ( partial z ) , ( partial F_x ) / ( partial z ) - ( partial F_z ) / ( partial x ) , ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) $),
     ($ "Laplacian of f" $, $ nabla^2 f = ( partial^2 f ) / ( partial x^2 ) + ( partial^2 f ) / ( partial y^2 ) + ( partial^2 f ) / ( partial z^2 ) $),
-    ($ "Directional Derivative of f in direction u" $, $ D_u f = nabla f . u $),
-    ($ "Line Integral of F along C" $, $ integral.cont_C F . d r $),
-    ($ "Surface Integral of F over S" $, $ integral.surf_S F . d S $),
+    ($ "Directional Derivative of f in direction u" $, $ D_u f = nabla f . hat(u) $),
+    ($ "Line Integral of F along C" $, $ integral.cont_C arrow(F) . d r $),
+    ($ "Surface Integral of F over S" $, $ integral.surf_S arrow(F) . d S $),
     ($ "Surface Integral of f over S" $, $ integral.surf_S f d S $),
-    ($ "Green's Theorem" $, $ integral.cont_C F . d r = integral.double_D ( ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) d A $),
-    ($ "Stokes' Theorem" $, $ integral.cont_C F . d r = integral.surf_S ( nabla times F ) . n d S $),
-    ($ "Divergence Theorem" $, $ integral.surf_S F . n d S = integral.vol_V nabla . F d V $),
+    ($ "Green's Theorem" $, $ integral.cont_C arrow(F) . d r = integral.double_D ( ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) d A $),
+    ($ "Stokes' Theorem" $, $ integral.cont_C arrow(F) . d r = integral.surf_S ( nabla times arrow(F) ) . hat(n) d S $),
+    ($ "Divergence Theorem" $, $ integral.surf_S arrow(F) . n d S = integral.vol_V nabla . F d V $),
     ($ "Curl of Gradient" $, $ nabla times ( nabla f ) = 0 $),
-    ($ "Divergence of Curl" $, $ nabla . ( nabla times F ) = 0 $),
+    ($ "Divergence of Curl" $, $ nabla . ( nabla times arrow(F) ) = 0 $),
     ($ "Laplacian of Vector Field" $, $ nabla^2 F = ( nabla^2 F_x , nabla^2 F_y , nabla^2 F_z ) $)
   )
-  ))
+  )
 
   #table_with_sn(
-  ([ "Formula" ], [ "Expression" ]),
+  columns:(25pt,200pt,1fr),
+  ([ Formula ], [ Expression ]),
   (
-    ($ "Euler's Theorem for Homogeneous Functions" $, $ x_1 ( partial f ) / ( partial x_1 ) + x_2 ( partial f ) / ( partial x_2 ) + … + x_n ( partial f ) / ( partial x_n ) = n f $),
-    ($ "Taylor Series of e^x around 0" $, $ e^x = 1 + x + x^2 / 2! + x^3 / 3! + … $),
+    ($ "Euler's Theorem for" \ "Homogeneous Functions" $, $ x_1 ( partial f ) / ( partial x_1 ) + x_2 ( partial f ) / ( partial x_2 ) + … + x_n ( partial f ) / ( partial x_n ) = n f $),
+    ($ "Taylor Series of" e^x "around 0" $, $ e^x = 1 + x + x^2 / 2! + x^3 / 3! + … $),
     ($ "Taylor Series of sin(x) around 0" $, $ sin( x ) = x - x^3 / 3! + x^5 / 5! - x^7 / 7! + … $),
     ($ "Taylor Series of cos(x) around 0" $, $ cos( x ) = 1 - x^2 / 2! + x^4 / 4! - x^6 / 6! + … $),
     ($ "Taylor Series of ln(1+x) around 0" $, $ ln( 1 + x ) = x - x^2 / 2 + x^3 / 3 - x^4 / 4 + … , |x| < 1 $),
-    ($ "Taylor Series of (1+x)^α around 0" $, $ ( 1 + x )^α = 1 + α x + α ( α - 1 ) x^2 / 2! + α ( α - 1 ) ( α - 2 ) x^3 / 3! + … $),
+    ($ "Taylor Series of" (1+x)^α \ "around 0" $, $ 1 + α x + α ( α - 1 ) x^2 / 2! + α ( α - 1 ) ( α - 2 ) x^3 / 3! + … $),
     ($ "Taylor Series of arctan(x) around 0" $, $ arctan( x ) = x - x^3 / 3 + x^5 / 5 - x^7 / 7 + … , |x| ≤ 1 $)
   )
 )
