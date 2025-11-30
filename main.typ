@@ -94,3 +94,5 @@
 #include "sections/04-vector.typ"
 #include "sections/05-transform.typ"
 #include "sections/06-prob-stats.typ"
+
+#include "sections/07-geometry.typ"
