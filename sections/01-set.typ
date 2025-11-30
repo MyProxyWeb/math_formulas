@@ -26,6 +26,7 @@
 + $ A times (B union C) = (A times B) union (A times C)$
 + $ A times (B inter C) = (A times B) inter (A times C)$
 + $ A times (B-C)=(A times B)-(A times C)$
+
 === Table (Domain and Range)
 
 #table_with_sn(
