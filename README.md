@@ -8,4 +8,5 @@ Build / preview:
 - `typst compile main.typ out.pdf` # produce a PDF
 
 You can also view the compiled PDF here:  
-[main.pdf](https://github.com/MyProxyWeb/math_formulas/blob/main/out.pdf)
+[main.pdf](https://github.com/MyProxyWeb/math_formulas/blob/main/final.pdf)
+[Download main.pdf](https://github.com/MyProxyWeb/math_formulas/raw/main/final.pdf)
