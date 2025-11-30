@@ -1,10 +1,88 @@
 = Set
 
++ $A union A = A$
++ $A inter A = A$
++ $A union Phi = A $
++ $A inter U = A$
++ $A union B = B union A$
++ $ A inter B = B inter A$
++ $ A Delta B = B Delta A$
++ $A - B != B -A$
++ $A times B != B times A $
++ $(A union B) union C = A union (B union C )$
++ $A inter (B inter C) = (A inter B) inter C$
++ $(A union B)prime = A prime inter B prime$
++ $(A inter B)prime = A prime union B prime$
++ $ A - (B inter C) = (A-B)union (A-C)$
++ $A-(B union C)=(A-B)inter (A-C)$
++ $A - B = A union B prime$
++ $B -A = B inter A prime$
++ $A inter(B-C) = (A inter B) - (A inter C)$
++ $A inter (B Delta C) = (A inter B) Delta (A inter C)$
++ $A union (B inter C) = (A union B) inter (A inter C)$
++ $ A inter (B union C) = (A inter B) union (A inter C)$
++ $ A times (B union C) = (A times B) union (A times C)$
++ $ A times (B inter C) = (A times B) inter (A times C)$
++ $ A times (B-C)=(A times B)-(A times C)$
+=== Table (Domain and Range)
 
-Inline set notation: $B = \{1,2,3\}$.
+// Reusable function to create tables with auto S.N.
+#let table_with_sn(
+  headers,
+  data,
+  columns: auto,
+  stroke: 0.5pt,
+  fill: (x, y) => if y == 0 { gray.lighten(70%) },
+  align: auto,
+) = {
+  // Calculate columns if auto
+  let cols = if columns == auto {
+    (auto, ..headers.map(_ => 1fr))
+  } else {
+    columns
+  }
+  
+  // Calculate alignment if auto
+  let aligns = if align == auto {
+    (center + horizon, ..headers.map(_ => left + horizon))
+  } else {
+    align
+  }
+  
+  table(
+    columns: cols,
+    stroke: stroke,
+    fill: fill,
+    align: aligns,
+    
+    // Header row
+    [*S.N.*], ..headers.map(h => [*#h*]),
+    
+    // Data rows with auto numbering
+    ..data.enumerate().map(((i, row)) => (
+      [#(i + 1)],
+      ..row,
+    )).flatten()
+  )
+}
+)
 
+#table_with_sn(
+  ([Function $f(x)$], [Range], [Domain]),
+  (
+    ([$y=sin(x)$],$[-1,1]$,$RR$),
+    ($y=cos(x)$,$[-1,1]$,$RR$),
+    ($y=tan(x)$,$RR$,$RR-(2n+1)pi/2$),
+    ($y=cot(x)$,$RR$,$RR-n pi$),
+    ($y=sec(x)$,$(-infinity,-1]union[1,infinity)$,$RR-(2n+1)pi/2$),
+    ($y=csc(x)$,$(-infinity,-1]union[1,infinity)$,$RR-n pi$),
+    ($y=a^x$,$[0,infinity)$,$RR$),
+    ($y=log(x)$,$RR$,$[0,infinity)$),
+    ($y=abs(x)$,$[0,infinity)$,$RR$),
+    
 
-More display math:
-
-
-$$\bigcup_{i=1}^n A_i, \qquad \bigcap_{i=1}^n A_i$$
+    
+  ),
+  stroke: 0.5pt + blue.darken(20%),
+  fill: (x, y) => if y == 0 { blue.lighten(80%) },
+)
