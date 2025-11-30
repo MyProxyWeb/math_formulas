@@ -44,6 +44,4 @@
 
     
   ),
-  stroke: 0.5pt + blue.darken(20%),
-  fill: (x, y) => if y == 0 { blue.lighten(80%) },
 )
