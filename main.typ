@@ -74,6 +74,9 @@
 // =========================
 #set page(numbering: "i", footer: page-footer)
 #counter(page).update(1)
+
+#include "sections/syllabus.typ"
+
 #outline(depth: 2)
 #pagebreak()
 
