@@ -57,7 +57,7 @@
   (
     ($ c $, $ c x + C $),
     ($ x^n $, $ x^( n + 1 ) / ( n + 1 ) + C $),
-    ($ x^-1 $, $ ln( abs( x ) ) + C $),
+    ($ x^(-1) $, $ ln( abs( x ) ) + C $),
     ($ e^x $, $ e^x + C $),
     ($ a^x $, $ a^x / ln( a ) + C $),
 
@@ -71,8 +71,8 @@
     ($ sec( x ) $, $ ln( abs( sec( x ) + tan( x ) ) ) + C $),
     ($ csc( x ) $, $ - ln( abs( csc( x ) + cot( x ) ) ) + C $),
 
-    ($ sec( x )^2 $, $ tan( x ) + C $),
-    ($ csc( x )^2 $, $ - cot( x ) + C $),
+    ($ sec^2( x ) $, $ tan( x ) + C $),
+    ($ csc^2( x ) $, $ - cot( x ) + C $),
     ($ sec( x ) tan( x ) $, $ sec( x ) + C $),
     ($ csc( x ) cot( x ) $, $ - csc( x ) + C $),
 
