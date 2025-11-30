@@ -1,0 +1,7 @@
+# Ignore all PDFs except one manually curated PDF
+*.pdf
+!final.pdf
+
+
+# Typst temp files
+*.typst
