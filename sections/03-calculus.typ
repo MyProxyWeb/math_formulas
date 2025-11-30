@@ -102,17 +102,17 @@
    (
     ($ "Gradient of f" $, $ nabla f = ( ( partial f ) / ( partial x ) , ( partial f ) / ( partial y ) , ( partial f ) / ( partial z ) ) $),
     ($ "Divergence of F" $, $ nabla . F = ( partial F_x ) / ( partial x ) + ( partial F_y ) / ( partial y ) + ( partial F_z ) / ( partial z ) $),
-    ($ "Curl of F" $, $ nabla x F = ( ( partial F_z ) / ( partial y ) - ( partial F_y ) / ( partial z ) , ( partial F_x ) / ( partial z ) - ( partial F_z ) / ( partial x ) , ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) $),
+    ($ "Curl of F" $, $ nabla times F = ( ( partial F_z ) / ( partial y ) - ( partial F_y ) / ( partial z ) , ( partial F_x ) / ( partial z ) - ( partial F_z ) / ( partial x ) , ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) $),
     ($ "Laplacian of f" $, $ nabla^2 f = ( partial^2 f ) / ( partial x^2 ) + ( partial^2 f ) / ( partial y^2 ) + ( partial^2 f ) / ( partial z^2 ) $),
     ($ "Directional Derivative of f in direction u" $, $ D_u f = nabla f . u $),
     ($ "Line Integral of F along C" $, $ integral.cont_C F . d r $),
     ($ "Surface Integral of F over S" $, $ integral.surf_S F . d S $),
     ($ "Surface Integral of f over S" $, $ integral.surf_S f d S $),
     ($ "Green's Theorem" $, $ integral.cont_C F . d r = integral.double_D ( ( partial F_y ) / ( partial x ) - ( partial F_x ) / ( partial y ) ) d A $),
-    ($ "Stokes' Theorem" $, $ integral.cont_C F . d r = integral.surf_S ( nabla x F ) . n d S $),
+    ($ "Stokes' Theorem" $, $ integral.cont_C F . d r = integral.surf_S ( nabla times F ) . n d S $),
     ($ "Divergence Theorem" $, $ integral.surf_S F . n d S = integral.vol_V nabla . F d V $),
-    ($ "Curl of Gradient" $, $ nabla x ( nabla f ) = 0 $),
-    ($ "Divergence of Curl" $, $ nabla . ( nabla x F ) = 0 $),
+    ($ "Curl of Gradient" $, $ nabla times ( nabla f ) = 0 $),
+    ($ "Divergence of Curl" $, $ nabla . ( nabla times F ) = 0 $),
     ($ "Laplacian of Vector Field" $, $ nabla^2 F = ( nabla^2 F_x , nabla^2 F_y , nabla^2 F_z ) $)
   )
   ))
