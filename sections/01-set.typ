@@ -32,15 +32,15 @@
 #table_with_sn(
   ([Function $f(x)$], [Range], [Domain]),
   (
-    ([$y=sin(x)$],$[-1,1]$,$RR$),
-    ($y=cos(x)$,$[-1,1]$,$RR$),
-    ($y=tan(x)$,$RR$,$RR-(2n+1)pi/2$),
-    ($y=cot(x)$,$RR$,$RR-n pi$),
-    ($y=sec(x)$,$(-infinity,-1]union[1,infinity)$,$RR-(2n+1)pi/2$),
-    ($y=csc(x)$,$(-infinity,-1]union[1,infinity)$,$RR-n pi$),
+    ([$y=sin x $],$[-1,1]$,$RR$),
+    ($y=cos x $,$[-1,1]$,$RR$),
+    ($y=tan x $,$RR$,$RR-(2n+1)pi/2$),
+    ($y=cot x $,$RR$,$RR-n pi$),
+    ($y=sec x $,$(-infinity,-1]union[1,infinity)$,$RR-(2n+1)pi/2$),
+    ($y=csc x $,$(-infinity,-1]union[1,infinity)$,$RR-n pi$),
     ($y=a^x$,$[0,infinity)$,$RR$),
-    ($y=log(x)$,$RR$,$[0,infinity)$),
-    ($y=abs(x)$,$[0,infinity)$,$RR$),
+    ($y=log x $,$RR$,$[0,infinity)$),
+    ($y=abs x $,$[0,infinity)$,$RR$),
     
 
     
