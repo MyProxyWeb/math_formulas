@@ -23,3 +23,7 @@
   - Indefinite and definite Integration
   - Application of Derivatives and Anti-derivatives
   - Ordinary Differential Equations.
+
++ Elementary Statistics and Probability
++ Elementary Trigonometry, Logarithm
++ Transforms: Laplace transform, Fourier series
